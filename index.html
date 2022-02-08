@@ -30,7 +30,7 @@
         <div>
             <form>
                 <div class="form-group">
-                  <label for="inputCity">Enter Pokemon...</label>
+                  <label for="inputSearch">Enter Pokemon...</label>
                   <input type="search" class="form-control" placeholder="Enter Pokemon">
                 </div id="searchBtn">
                 <button type="submit" class="btn btn-primary">Search</button>
@@ -38,10 +38,8 @@
         </div>
 
         <div>
-            <aside id=searchResults>
-                <button id=previousSearch>Previous Search</button><br>
-                
-            </aside>
+            <ul id="search-list">
+          </ul>
         </div>
         </div>
 
@@ -49,53 +47,53 @@
 
             <figure class="card card--normal">
               <div class="card__image-container">
-                <img src="https://cdn.bulbagarden.net/upload/thumb/e/e2/133Eevee.png/1200px-133Eevee.png" alt="Image" class="card__image">   
+                <img id="pokemonImage" alt="Image" class="card__image">   
               </div>
               
               <figcaption class="card__caption">
-                <h1 class="card__name">Name</h1>
+                <h1 id="pokemonName" class="card__name">Name</h1>
             
-                <h3 class="card__type">
-                  type
+                <h3 id="pokemonType" class="card__type">
+                  
                 </h3>
             
-                <table class="card__stats">
+                <div class="card__stats">
                   <tbody><tr>
-                    <th>HP</th>
-                    <td>x</td>
+                    <th id="hp"></th>
+                    <td id="hpResult"></td>
                   </tr>
                   <tr>
-                    <th>Attack</th>
-                    <td>x</td>
+                    <th id="attack"></th>
+                    <td id="attackResult"></td>
                   </tr>
                   
                   <tr>
-                    <th>Defense</th>
-                    <td>x</td>
+                    <th id="defense"></th>
+                    <td id="defenseResult"></td>
                   </tr>
             
                   <tr>
-                    <th>Special Attack</th>
-                    <td>x</td>
+                    <th id="specialAttack"></th>
+                    <td id="specialAttackResult"></td>
                   </tr>
                   <tr>
-                    <th>Special Defense</th>
-                    <td>x</td>
+                     <th id="specialDefense"></th>
+                    <td id="specialDefenseResult"></td>
                   </tr>
                   <tr>
-                    <th>Speed</th>  
-                    <td>x</td>
+                     <th id="Speed"></th>
+                    <td id="speedResult"></td>
                   </tr>
                 </tbody></table>
                 
                 <div class="card__abilities">
                   <h4 class="card__ability">
-                    <span class="card__label">Ability</span>
-                    x
+                    <span id ="ability" class="card__label"></span>
+                    
                   </h4>
                   <h4 class="card__ability">
-                    <span class="card__label">Hidden Ability</span>
-                    x
+                    <span id="hiddenAbility" class="card__label"></span>
+                    
                   </h4>
                 </div>
               </figcaption>
