@@ -1,0 +1,48 @@
+body {
+    font-family: "Arial, Verdana, sans-serif", sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .headline {
+      
+  }
+  
+  h1 {
+    font-weight: 700;
+    color: blue;
+    
+  }
+  
+  .container {
+  
+  }
+  
+  .row {
+      justify-content: left;
+  }
+   .col-md-4 {
+  
+   }
+   .form-group {
+  
+   }
+  
+   #searchBtn {
+       align-items: flex-end;
+  }
+  
+  .btn-primary{
+  
+  }
+  #search-list, #cards {
+  
+  }
+  
+  
+  .card--normal, .card__caption {
+  
+  }
+  
+    
+  }
