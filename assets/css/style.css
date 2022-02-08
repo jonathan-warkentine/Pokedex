@@ -1,5 +1,5 @@
 body {
-    font-family: "Arial, Verdana, sans-serif", sans-serif;
+    font-family: "Arial, Verdana, sans-serif";
     text-align: center;
     margin: 20px;
   }
@@ -21,10 +21,12 @@ body {
   .row {
       justify-content: left;
   }
+
    .col-md-4 {
   
    }
    .form-group {
+     font font-weight: 900;
   
    }
   
@@ -35,14 +37,105 @@ body {
   .btn-primary{
   
   }
-  #search-list, #cards {
+
+
+  
+  #cards {
   
   }
   
+  .card--normal, {
+
+  }
   
-  .card--normal, .card__caption {
+  .card__image-container {
+
+  }
+  #pokemonImage{
+
+  }
+  
+  .card__image{
+
+  }
+
+
+  .card__caption {
   
   }
+
+  #pokemonName {
+
+  }
+
+  .card__name { 
+
+  }
+
+  #pokemonType {
+
+  }
+
+  .card__type {
+
+  }
+
+  .card__stats {
+    margin: 1.5em 0;
+  
+    th {
+      font-family:"Arial, Verdana, sans-serif";
+      text-align: right;
+      font-weight: 300;
+
+    }
+
+  }
+  
+  /*<th> Hp: </th>*/
+
+  #hpResult {
+
+  }
+
+  #attack,#attackResult {
+
+  }
+
+  #defense, #defenseResult {
+
+  }
+
+  #specialAttack. #specialAttackResult {
+
+  }
+  #specialDefense, #specialDefenseResult {
+
+  }
+
+  #Speed, #speedResult {
+
+  }
+
+  .card_abilitites, .card__ability  {
+
+  }
+
+
+  #ability {
+    margin-top: 1em;
+    flex: 1 0;
+
+  }
+
+  .card__label {
+
+  }
+
+  #hiddenAbility {
+
+  }
+
   
     
   }
