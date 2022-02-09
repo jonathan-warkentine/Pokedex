@@ -6,118 +6,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon Searcher</title>
 
+
+  <!--Bootstrap CSS Link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 
-
+  <!--Custom CSS Link-->
     <link rel="stylesheet" src="/assets/css/style.css"/>
 
   </head>
+
+
 <body>
-    <div>
+
+    <!--Headline-->
+
         <div class="headline">
             <header>
                     <h1>Search For Your Favorite Pokemon</h1>
-              
-            <iframe width=“100%” height="166" scrolling=“no” frameborder=“no” allow=“autoplay” src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/377399561"> </iframe>               
-            </header>
-
-        
-        </div>
-
-
-
-        <div class="container"> 
-
-            <div class ="row justify-content-left">
-
-        <div class="col-md-4">
-
-        <div>
-            <form>
-                <div class="form-group">
-                  <label for="inputSearch">Enter Pokemon...</label>
-                  <input type="search" class="form-control" placeholder="Enter Pokemon" id="searchBar">
-                </div id="searchBtn">
-                <button type="submit" class="btn btn-primary">Search</button>
-              </form>
-        </div>
-
-        <div>
-            <ul id="search-list">
-          </ul>
-        </div>
-        </div>
-
-        <div id="cards">  
-
-            <figure class="card card--normal">
-              <div class="card__image-container">
-                <img id="pokemonImage" alt="Image" class="card__image">   
-              </div>
-              
-              <figcaption class="card__caption">
-                <h1 id="pokemonName" class="card__name">Name</h1>
             
-                <h3 id="pokemonType" class="card__type">
-                  
-                </h3>
+             <!--SoundCloud Widget-->
+
+            <iframe width=“100%” height="166" scrolling=“no” frameborder=“no” allow=“autoplay” src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/377399561">    </iframe>              
             
-                <div class="card__stats">
-                  <tbody><tr>
-                    <th> HP </th>
-                    <td id="hpResult"></td>
-                  </tr>
-                  <tr>
-                    <th id="attack"> Attack </th>
-                    <td id="attackResult"></td>
-                  </tr>
-                  
-                  <tr>
-                    <th id="defense"> Defense </th>
-                    <td id="defenseResult"></td>
-                  </tr>
-            
-                  <tr>
-                    <th id="specialAttack"> Special Attack </th>
-                    <td id="specialAttackResult"></td>
-                  </tr>
-                  <tr>
-                     <th id="specialDefense"> Special Defense </th>
-                    <td id="specialDefenseResult"></td>
-                  </tr>
-                  <tr>
-                     <th id="Speed"> Speed </th>
-                    <td id="speedResult"></td>
-                  </tr>
-                </tbody></table>
-                
-                <div class="card__abilities">
-                  <h4 class="card__ability">
-                    <span id ="ability" class="card__label"> Card Ability </span>
-                    
-                  </h4>
-                  <h4 class="card__ability">
-                    <span id="hiddenAbility" class="card__label"> Hidden Ability </span>
-                    
-                  </h4>
+          </header>
+        </div>
+
+
+      <!--Start Bootstrap Container-->
+
+
+      <div class="container"> 
+
+          <!--Search Bar-->
+
+      <div class ="row justify-content-left">
+
+          <div class="col-md-4">
+
+                <div>
+                    <form>
+                        <div class="form-group" id="form-group">
+                          <label for="inputSearch">Enter Pokemon...</label>
+                          <input type="search" class="form-control" placeholder="Enter Pokemon" id="searchBar">
+                        </div id="searchBtn">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                      </form>
                 </div>
-              </figcaption>
-            </figure>
-            </div>
-        </div>
 
-    </div>   
-    </div> 
-    </div>
-</div>
-  <!-- Regular JQuery script linked below -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-      <!-- Bootstrap script link below -->
+                <div>
+                    <ul id="search-list">
+                  </ul>
+                </div>
+          </div>
+
+
+      <!--Pokemon Card Begins-->
+        <div id="cards">  
+          
+          <figure class="card card--normal" id="figure">
+                  
+            <!--Pokemon Card Image-->
+              <div class="card_image-container">
+                <img id="pokemonImage" alt="Image" class="card_image">   
+              </div>
+  
+
+              <!--Image Caption - Begins Pokemon Information-->
+               <figcaption class="card_caption">
+
+                  <!--Pokemon Name and Type-->
+
+                  <h1 id="pokemonName" class="card_name">Name</h1>
+              
+                  <h3 id="pokemonType" class="card_type"> Type: </h3>
+            
+
+                      <!--Pokemon Stats-->
+                          
+                        <div class="card_stats" id="card_stats">
+                            
+                          <table>
+
+                            <tbody>
+                              <tr>
+                                <th id="hp"> HP </th>
+                                <td id="hpResult"></td>
+                              </tr>
+
+                              <tr>
+                                <th id="attack"> Attack </th>
+                                <td id="attackResult"></td>
+                              </tr>
+                              
+                              <tr>
+                                <th id="defense"> Defense </th>
+                                <td id="defenseResult"></td>
+                              </tr>
+                        
+                              <tr>
+                                <th id="specialAttack"> Special Attack </th>
+                                <td id="specialAttackResult"></td>
+                              </tr>
+
+                              <tr>
+                                <th id="specialDefense"> Special Defense </th>
+                                <td id="specialDefenseResult"></td>
+                              </tr>
+
+                              <tr>
+                                <th id="Speed"> Speed </th>
+                                <td id="speedResult"></td>
+                              </tr>
+
+                            </tbody> 
+                          
+                          </table>
+
+                        </div>
+
+
+                        <!--Pokemon Other Abilities-->
+
+                          <div class="card_abilities" id="card_abilities">
+                            
+                            <h4 class="card_ability">
+                              <span id ="ability" class="card_label"> Card Ability: </span>
+                            </h4>
+
+                            <h4 class="card_ability">
+                              <span id="hiddenAbility" class="card_label"> Hidden Ability: </span>
+                            </h4>
+
+                          </div>
+
+              </figcaption>
+
+        </figure>
+
+     </div>
+
+
+    <!-- Regular JQuery script linked below -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap script link below -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
     <!-- custom JS script link below -->
     <script src="assets/js/script.js"></script>
-</body>
+
+
+  </body>
 
 </html>
