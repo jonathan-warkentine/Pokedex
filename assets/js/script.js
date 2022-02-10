@@ -13,9 +13,14 @@ function fetchPokemon(search) {
     })
     .then( function(data){
         console.log(data);
+        writePokemon(data);
     })
     .catch( function(error){
         alert(error);
     })
 }
     
+
+function writePokemon(data){
+    console.log("name: "+ data.name);
+}
