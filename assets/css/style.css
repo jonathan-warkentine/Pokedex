@@ -1,167 +1,197 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 body {
-    font-family: "Open Snas Condensed","Open Sans" , Arial, Helvetica, sans-serif;
+  font-family: "Arial, Verdana, sans-serif";
+  text-align: center;
+  margin: 20px;
+}
+
+.headline {
+  background-color: blue;
+}
+
+h1 {
+  font-weight: 700;
+  color: white;
+  font-family: Kanit, sans-serif;
+  margin-top: 15px;
+}
+
+img {
+  display: inline;
+}
+
+.row {
+    justify-content: left;
+}
+
+
+.card_image-container {
+  background-color: rgba(white, 0.7);
     text-align: center;
-    margin: 20px;
-  }
-  
-  
-  h1 {
-    font-weight: 800;
-    color: blue;
-    font-family:'Times New Roman', Times, serif
-    
-  }
-  
-  .container {
-  
-  
-  }
-  
-  .row {
-      
-  }
-
-figure {
-    background-color: linear-gradient(90deg, rgba(255,222,0,1) 34%, rgba(232,255,153,1) 83%);
-    display: inline-block;
-    width: 300px;
-    border-radius: 15px;  
-    margin: 10px;
-    text-align: left;
-    box-shadow: 0px 5px 20px -10px #111111;
-
-  }
+    padding: 16px 16px 0;
+    border-radius: 3px 3px 0 0;
+}
 
 
-  .card_stats {
-    background-color: rgba(#ffffff, 0.65);
-    padding: 1em;
-    position: relative;
-    border-radius: 0 0 3px 3px;
-  }   
+.fire {
+  background-image: linear-gradient(#ff0000, yellow);
+  display: inline-block;
+  width: 400px;
+  border-radius: 15px;  
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  border-style: solid;
+  border-color: rgb(255, 0, 0);
+  border-width: 10px;
+}
 
 
-  img {
-  
-      background-color: rgba(#000000, 0.7);
-      text-align: center;
-      padding: 16px 16px 0;
-      border-radius: 3px 3px 0 0;
-    
-  }
-  
-figcaption{
-      background-color: rgba(#ffffff, 0.65);
-      padding: 16px;
-      position: relative;
-      border-radius: 0 0 3px 3px; }
+
+.water {
+  background-image: linear-gradient(blue, white);
+  display: inline-block;
+  width: 400px;
+  border-radius: 15px;  
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  border-style: solid;
+  border-color: blue;
+  border-width: 10px;
+}
+
+.ice {
+  background-image: linear-gradient(rgb(174, 174, 240), white);
+  display: inline-block;
+  width: 400px;
+  border-radius: 15px;  
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  border-style: solid;
+  border-color: rgb(174, 174, 240);
+  border-width: 10px;
+}
+
+.electric {
+  background-image: linear-gradient(orange, yellow);
+  display: inline-block;
+  width: 400px;
+  border-radius: 15px;  
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  border-style: solid;
+  border-color: orange;
+  border-width: 10px;
+}
+
+.fairy {
+  background-image: linear-gradient(lavender, pink);
+  display: inline-block;
+  width: 400px;
+  border-radius: 15px;  
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  border-style: solid;
+  border-color: lavender;
+  border-width: 10px;
+}
+
+.normal {
+  background-image: linear-gradient(grey, silver);
+  display: inline-block;
+  width: 400px;
+  border-radius: 15px;  
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  border-style: solid;
+  border-color: grey;
+  border-width: 10px;
+}
+
+.psychic {
+  background-image: linear-gradient(indigo, lavender);
+  display: inline-block;
+  width: 400px;
+  border-radius: 15px;  
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  border-style: solid;
+  border-color: indigo;
+  border-width: 10px;
+}
+
+.dark {
+  background-image: linear-gradient(navy, rgb(184, 184, 255));
+  display: inline-block;
+  width: 400px;
+  border-radius: 15px;  
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  border-style: solid;
+  border-color: navy;
+  border-width: 10px;
+}
+
+.grass {
+  background-image: linear-gradient(green, rgb(163, 241, 163));
+  display: inline-block;
+  width: 400px;
+  border-radius: 15px;  
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  border-style: solid;
+  border-color: green;
+  border-width: 10px;
+}
+
  
-    
-    
-    
-  .name {
-      font-family:"Open Snas Condensed","Open Sans" , Arial, Helvetica, sans-serif;
-      text-align: center;
+
+
+img {
+
+    background-color: rgba(#000000, 0.7);
+    text-align: center;
+    padding: 16px 16px 0;
+    border-radius: 3px 3px 0 0;
+  
+}
+
+figcaption{
+    background-color: rgba(#ffffff, 0.65);
+    padding: 16px;
+    position: relative;
+    border-radius: 0 0 3px 3px; }
+
+  .card_abilities  {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 16px;
+    }
+  
+  
+.name {
+    text-align: center;
+  }
+  
+
+    th {
+      text-align: right;
+      font-weight: 300;
+      width: 100%;
     }
     
- 
-      th {
-        text-align: right;
-        font-weight: 300;
-        width: 100%;
-      }
-      
-      
-      th, td {
-        width: 50%;
-        padding: 4px 8px 0;
-      }
-      
-
-   .col-md-4 {
-     font-family: 'Courier New', Courier, monospace;
-     font-weight: 800;
-  
-   }
-   .form-group {
-     font font-weight: 900;
-  
-   }
-  
-   #searchBtn {
     
-  }
-  
-  .btn-primary,{
-    border-radius: 10px;
-     border: 4px;
-    padding: 20px;
-    width:100px;
+    th, td {
+      width: 50%;
+      padding: 4px 8px 0;
+    }
     
-  }
-
-  
-  #cards {
-   
-  
-  }
-  
-  .card--normal {
-    
-
-  }
-  
-  .card__image-container {
-
-  }
-  #pokemonImage{
-
-  }
-  
-  .card__image{
-    display: flex;
-    justify-content: flex-end;
-    
-   
-
-  }
-
-  .card__name { 
-    display: flex ;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2.5em;
-    font-weight: 800;
-  
-  }
-
-  #pokemonName {
-    font-family: "Open Snas Condensed","Open Sans" , Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 800;
-    letter-spacing: 0.02em;
-    color: orangered;
-
-  }
-
-
-  #pokemonType {
-    color: orange;
-    font-weight: 600;
-
-
-  }
-
-  .card__type {
-    display: flex;
-    justify-content: flex-end;
-   
-    
-
-  }
-
-  .card__stats {
-    margin: 1.5em 0;
-  }
