@@ -8,6 +8,10 @@ body {
     display: inline;
       
   }
+  iframe {
+    
+    
+  }
   
   h1 {
     font-weight: 700;
@@ -133,7 +137,7 @@ body {
 
   .card_abilitites, .card__ability  {
     display: flex;
-    jusitfy-content: space-between;
+    jusitfy-content: center, space-between;
 
   }
 
