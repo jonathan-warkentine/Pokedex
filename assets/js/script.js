@@ -32,13 +32,11 @@ function writePokemon(data){
     document.querySelector("#pokemonName").textContent = data.name.toUpperCase(); //write name
     document.querySelector("#pokemonType").textContent = data.types[0].type.name; //write type
 
-    for (let i=0; i<data.stats.length; i++) {
-        document.querySelector(`#${data.stats[i].stat.name}Result`).textContent = data.stats[i].base_stat
-    }
-    console.log(data.stats[0].base_stat); //write HP
-    console.log(data.stats[1].base_stat); //write Attack
-    console.log(data.stats[2].base_stat); //write Defense
-    console.log(data.stats[3].base_stat); //write special attack
+    // for (let i=0; i<data.stats.length; i++) {
+    //     document.querySelector(`#${data.stats[i].stat.name}Result`).textContent = data.stats[i].base_stat
+    // }
+    
+    document.querySelector("#pokemonImage").setAttribute("src", data.sprites.other.dream_world.front_default);
 }
 
 //# sourceMappingURL=http://ent/web-sourcemaps/api.js-27d0ec1de3c5.map
