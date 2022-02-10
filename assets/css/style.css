@@ -1,10 +1,11 @@
 body {
-    font-family: "Arial, Verdana, sans-serif";
+    font-family: "Open Snas Condensed","Open Sans" , Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 20px;
   }
   
   .headline {
+    display: inline;
       
   }
   
@@ -56,6 +57,8 @@ body {
   }
   
   .card__image{
+    display: flex;
+    justify-content: flex-end;
 
   }
 
@@ -65,10 +68,19 @@ body {
   }
 
   #pokemonName {
+    font-family: "Open Snas Condensed","Open Sans" , Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
 
   }
 
   .card__name { 
+    display: flex ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    font-weight: 800;
 
   }
 
@@ -77,6 +89,8 @@ body {
   }
 
   .card__type {
+    display: flex;
+    justify-content: flex-end;
 
   }
 
@@ -118,6 +132,8 @@ body {
   }
 
   .card_abilitites, .card__ability  {
+    display: flex;
+    jusitfy-content: space-between;
 
   }
 
