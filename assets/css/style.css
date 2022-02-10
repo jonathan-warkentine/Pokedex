@@ -1,5 +1,5 @@
 body {
-    font-family: "Arial, Verdana, sans-serif", sans-serif;
+    font-family: "Arial, Verdana, sans-serif";
     text-align: center;
     margin: 20px;
   }
@@ -21,10 +21,68 @@ body {
   .row {
       justify-content: left;
   }
+
+figure {
+    background-color: linear-gradient(90deg, rgba(255,222,0,1) 34%, rgba(232,255,153,1) 83%);
+    display: inline-block;
+    width: 300px;
+    border-radius: 15px;  
+    margin: 10px;
+    text-align: left;
+    box-shadow: 0px 5px 20px -10px #111111;
+
+  }
+
+
+  .card_stats {
+    background-color: rgba(#ffffff, 0.65);
+    padding: 1em;
+    position: relative;
+    border-radius: 0 0 3px 3px;
+  }   
+
+
+  img {
+  
+      background-color: rgba(#000000, 0.7);
+      text-align: center;
+      padding: 16px 16px 0;
+      border-radius: 3px 3px 0 0;
+    
+  }
+  
+figcaption{
+      background-color: rgba(#ffffff, 0.65);
+      padding: 16px;
+      position: relative;
+      border-radius: 0 0 3px 3px; }
+ 
+    
+    
+    
+  .name {
+      text-align: center;
+    }
+    
+ 
+      th {
+        text-align: right;
+        font-weight: 300;
+        width: 100%;
+      }
+      
+      
+      th, td {
+        width: 50%;
+        padding: 4px 8px 0;
+      }
+      
+
    .col-md-4 {
   
    }
    .form-group {
+     font font-weight: 900;
   
    }
   
@@ -35,14 +93,105 @@ body {
   .btn-primary{
   
   }
-  #search-list, #cards {
+
+
+  
+  #cards {
   
   }
   
+  .card--normal, {
+
+  }
   
-  .card--normal, .card__caption {
+  .card__image-container {
+
+  }
+  #pokemonImage{
+
+  }
+  
+  .card__image{
+
+  }
+
+
+  .card__caption {
   
   }
+
+  #pokemonName {
+
+  }
+
+  .card__name { 
+
+  }
+
+  #pokemonType {
+
+  }
+
+  .card__type {
+
+  }
+
+  .card__stats {
+    margin: 1.5em 0;
+  
+    th {
+      font-family:"Arial, Verdana, sans-serif";
+      text-align: right;
+      font-weight: 300;
+
+    }
+
+  }
+  
+  /*<th> Hp: </th>*/
+
+  #hpResult {
+
+  }
+
+  #attack,#attackResult {
+
+  }
+
+  #defense, #defenseResult {
+
+  }
+
+  #specialAttack. #specialAttackResult {
+
+  }
+  #specialDefense, #specialDefenseResult {
+
+  }
+
+  #Speed, #speedResult {
+
+  }
+
+  .card_abilitites, .card__ability  {
+
+  }
+
+
+  #ability {
+    margin-top: 1em;
+    flex: 1 0;
+
+  }
+
+  .card__label {
+
+  }
+
+  #hiddenAbility {
+
+  }
+
   
     
   }
