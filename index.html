@@ -10,8 +10,8 @@
   <!--Bootstrap CSS Link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 
-  <!--Custom CSS Link-->
-    <link rel="stylesheet" href="assets/css/style.css"/>
+
+    <link rel="stylesheet" href="./assets/css/style.css"/>
 
   </head>
 
@@ -23,7 +23,47 @@
         <div class="headline">
             <header>
                     <h1>Search For Your Favorite Pokemon</h1>
-            
+              
+            <iframe width=“100%” height="166" scrolling=“no” frameborder=“no” allow=“autoplay” src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/377399561"> </iframe>               
+            </header>
+
+        
+        </div>
+
+
+
+        <div class="container"> 
+
+            <div class ="row justify-content-left">
+
+        <div class="col-md-4">
+
+        <div>
+            <form id="form">
+                <div class="form-group">
+                  <label for="inputSearch">Enter Pokemon...</label>
+                  <input type="search" class="form-control" placeholder="Enter Pokemon" id="searchBar">
+                </div id="searchBtn">
+                <button type="submit" class="btn btn-primary">Search</button>
+              </form>
+        </div>
+
+        <div>
+            <ul id="search-list">
+          </ul>
+        </div>
+        </div>
+
+        <div id="cards">  
+
+            <figure class="card card--normal">
+              <div class="card__image-container">
+                <img id="pokemonImage" alt="Image" class="card__image">   
+              </div>
+              
+              <figcaption class="card__caption">
+                <h1 id="pokemonName" class="card__name">Name</h1>
+          
              <!--SoundCloud Widget-->
 
             <iframe width=“100%” height="166" scrolling=“no” frameborder=“no” allow=“autoplay” src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/377399561">    </iframe>              
@@ -76,7 +116,7 @@
 
                   <!--Pokemon Name and Type-->
 
-                  <h1 id="pokemonName" class="card_name">Name</h1>
+                  <h1 id="pokemonName" class="card_name">Charizard</h1>
               
                   <h3 id="pokemonType" class="card_type badge badge-secondary"> Type: </h3>
             
@@ -89,33 +129,33 @@
 
                             <tbody>
                               <tr>
-                                <th id="hp"> HP </th>
-                                <td id="hpresult"></td>
+                                <th id="hp"> HP:  78</th>
+                                <td id="hpResult"></td>
                               </tr>
 
                               <tr>
-                                <th id="attack"> Attack </th>
-                                <td id="attackresult"></td>
+                                <th id="attack"> Attack:  84</th>
+                                <td id="attackResult"></td>
                               </tr>
                               
                               <tr>
-                                <th id="defense"> Defense </th>
-                                <td id="defenseresult"></td>
+                                <th id="defense"> Defense:  78</th>
+                                <td id="defenseResult"></td>
                               </tr>
                         
                               <tr>
-                                <th id="specialAttack"> Special Attack </th>
-                                <td id="special-attackresult"></td>
+                                <th id="specialAttack"> Sp. Atk: 109</th>
+                                <td id="specialAttackResult"></td>
                               </tr>
 
                               <tr>
-                                <th id="specialDefense"> Special Defense </th>
-                                <td id="special-defenseresult"></td>
+                                <th id="specialDefense"> Sp. Def: 85</th>
+                                <td id="specialDefenseResult"></td>
                               </tr>
 
                               <tr>
-                                <th id="Speed"> Speed </th>
-                                <td id="speedresult"></td>
+                                <th id="Speed"> Speed:  100</th>
+                                <td id="speedResult"></td>
                               </tr>
 
                             </tbody> 
@@ -130,7 +170,8 @@
                           <div class="card_abilities" id="card_abilities">
                             
                             <h4 class="card_ability">
-                              <span id ="ability" class="card_label"> Card Ability: </span>
+                              <span id ="ability" class="card_label"> Card Ability: Blaze- 
+                                Boosts the power of his Fire-type moves when its health is low. </span>
                             </h4>
 
                             <h4 class="card_ability">
