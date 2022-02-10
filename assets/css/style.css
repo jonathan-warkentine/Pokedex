@@ -1,25 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
 body {
-  font-family: "Arial, Verdana, sans-serif";
-  text-align: center;
-  margin: 20px;
-}
-
-
-h1 {
-  font-weight: 700;
-  color: blue;
-  font-family: Kanit, sans-serif;
+    font-family: "Open Snas Condensed","Open Sans" , Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
   
-}
+  
+  h1 {
+    font-weight: 800;
+    color: blue;
+    font-family:'Times New Roman', Times, serif
+    
+  }
   
   .container {
+  
   
   }
   
   .row {
-      justify-content: left;
+      
   }
 
 figure {
@@ -61,6 +62,7 @@ figcaption{
     
     
   .name {
+      font-family:"Open Snas Condensed","Open Sans" , Arial, Helvetica, sans-serif;
       text-align: center;
     }
     
@@ -79,6 +81,8 @@ figcaption{
       
 
    .col-md-4 {
+     font-family: 'Courier New', Courier, monospace;
+     font-weight: 800;
   
    }
    .form-group {
@@ -87,20 +91,25 @@ figcaption{
    }
   
    #searchBtn {
-       align-items: flex-end;
+    
   }
   
-  .btn-primary{
-  
+  .btn-primary,{
+    border-radius: 10px;
+     border: 4px;
+    padding: 20px;
+    width:100px;
+    
   }
-
 
   
   #cards {
+   
   
   }
   
-  .card--normal, {
+  .card--normal {
+    
 
   }
   
@@ -112,86 +121,47 @@ figcaption{
   }
   
   .card__image{
-
-  }
-
-
-  .card__caption {
-  
-  }
-
-  #pokemonName {
+    display: flex;
+    justify-content: flex-end;
+    
+   
 
   }
 
   .card__name { 
+    display: flex ;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+    font-weight: 800;
+  
+  }
+
+  #pokemonName {
+    font-family: "Open Snas Condensed","Open Sans" , Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    color: orangered;
 
   }
 
+
   #pokemonType {
+    color: orange;
+    font-weight: 600;
+
 
   }
 
   .card__type {
+    display: flex;
+    justify-content: flex-end;
+   
+    
 
   }
 
   .card__stats {
     margin: 1.5em 0;
-  
-    th {
-      font-family:"Arial, Verdana, sans-serif";
-      text-align: right;
-      font-weight: 300;
-
-    }
-
-  }
-  
-  /*<th> Hp: </th>*/
-
-  #hpResult {
-
-  }
-
-  #attack,#attackResult {
-
-  }
-
-  #defense, #defenseResult {
-
-  }
-
-  #specialAttack. #specialAttackResult {
-
-  }
-  #specialDefense, #specialDefenseResult {
-
-  }
-
-  #Speed, #speedResult {
-
-  }
-
-  .card_abilitites, .card__ability  {
-
-  }
-
-
-  #ability {
-    margin-top: 1em;
-    flex: 1 0;
-
-  }
-
-  .card__label {
-
-  }
-
-  #hiddenAbility {
-
-  }
-
-  
-    
   }
