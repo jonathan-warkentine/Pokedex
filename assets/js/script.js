@@ -58,13 +58,13 @@ $(window).on("load",loadlastPoke);
 const pokemon = "";
 const searchPoke = $("searchBar");
 const searchButton = $("searchBtn");
-const currentPoke = $("pokemonName");
-const currentType = $("pokemonType");
+const currentPoke = $("pokemonname");
+const currentType = $("pokemontype");
 const hp = $("hpResult");
-const attack = $("attackResult");
-const defense = $("defenseResult");
-const specialAttack = $("specialAttackResult");
-const specialDefense = $("specialDefenseResult");
+const attack = $("attack-result");
+const defense = $("defense-result");
+const specialAttack = $("special-attackresult");
+const specialDefense = $("special-defenseresult");
 const speed = $("speedresult")
 const sPoke = [];
 
