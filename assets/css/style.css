@@ -1,18 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
 body {
-    font-family: "Arial, Verdana, sans-serif";
-    text-align: center;
-    margin: 20px;
-  }
+  font-family: "Arial, Verdana, sans-serif";
+  text-align: center;
+  margin: 20px;
+}
+
+
+h1 {
+  font-weight: 700;
+  color: blue;
+  font-family: Kanit, sans-serif;
   
-  .headline {
-      
-  }
-  
-  h1 {
-    font-weight: 700;
-    color: blue;
-    
-  }
+}
   
   .container {
   
