@@ -18,7 +18,7 @@ if(response.cod==200){
     }
 }
 
-//adds to history list
+//recent searches list
 function addToList(c){
     var listEl= $("<li>"+c.toUpperCase()+"</li>");
     $(listEl).attr("class","list-group-item");
@@ -52,3 +52,20 @@ function loadlastPoke(){
 //Click Handlers
 $(document).on("click",invokePastSearch);
 $(window).on("load",loadlastPoke);
+
+
+//list of potential variables
+const pokemon = "";
+const searchPoke = $("searchBar");
+const searchButton = $("searchBtn");
+const currentPoke = $("pokemonName");
+const currentType = $("pokemonType");
+const hp = $("hpResult");
+const attack = $("attackResult");
+const defense = $("defenseResult");
+const specialAttack = $("specialAttackResult");
+const specialDefense = $("specialDefenseResult");
+const speed = $("speedresult")
+const sPoke = [];
+
+
