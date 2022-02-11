@@ -17,6 +17,12 @@ h1 {
   margin-top: 15px;
 }
 
+#cards {
+  display: flex!important;
+  align-content: center;
+  justify-content: center;
+}
+
 .card_name{
   text-shadow: none;
 }
