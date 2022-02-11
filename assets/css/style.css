@@ -50,6 +50,10 @@ img {
     border-radius: 3px 3px 0 0;
 }
 
+form {
+  font-family: kanit, sans-serif;
+}
+
 
 .fire {
   background-image: linear-gradient(#ff0000, yellow);
