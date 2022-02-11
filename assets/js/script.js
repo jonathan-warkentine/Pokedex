@@ -1,18 +1,18 @@
 //setting up local storage
 if(response.cod==200){
-    sCity=JSON.parse(localStorage.getItem("pokename"));
+    sCity=JSON.parse(localStorage.getItem("pokemonname"));
     console.log(sCity);
     if (sCity==null){
         sCity=[];
         sCity.push(city.toUpperCase()
         );
-        localStorage.setItem("pokename",JSON.stringify(sCity));
+        localStorage.setItem("pokemonname",JSON.stringify(sCity));
         addToList(city);
     }
     else {
         if(find(city)>0){
             sCity.push(city.toUpperCase());
-            localStorage.setItem("pokename",JSON.stringify(sCity));
+            localStorage.setItem("pokemonname",JSON.stringify(sCity));
             addToList(city);
         }
     }
@@ -56,16 +56,27 @@ $(window).on("load",loadlastPoke);
 
 //list of potential variables
 const pokemon = "";
-const searchPoke = $("searchBar");
-const searchButton = $("searchBtn");
-const currentPoke = $("pokemonname");
-const currentType = $("pokemontype");
-const hp = $("hpResult");
-const attack = $("attack-result");
-const defense = $("defense-result");
-const specialAttack = $("special-attackresult");
-const specialDefense = $("special-defenseresult");
-const speed = $("speedresult")
+const searchPoke = $("#searchBar");
+const searchButton = $("#searchBtn");
+const currentPoke = $("#pokemonname");
+const currentType = $("#pokemontype");
+const hp = $("#hpResult");
+const attack = $("#attack-result");
+const defense = $("#defense-result");
+const specialAttack = $("#special-attackresult");
+const specialDefense = $("#special-defenseresult");
+const speed = $("#speedresult");
+//pokemon array
 const sPoke = [];
+
+$("#form").on("submit", function(event){
+    event.preventDefault();
+    console.log("search submitted");
+    displayRecent(document.querySelector("#searchBar").value);
+    })
+
+function displayRecent(data) {
+  document.querySelector("#search-list").textContent = data.name.toUpperCase();
+}
 
 
