@@ -17,13 +17,33 @@ body {
 
 h1 {
   font-weight: 700;
-  color: whitesmoke; 
+  color: white; 
   font-family: kanit, sans-serif;
   margin-top: 15px;
-  text-shadow: 5px 5px black;
-  font-style: oblique;
+  font-style: oblique; 
 }
 
+h2 {
+  font-weight: 700;
+  color: white; 
+  font-family: kanit, sans-serif;
+  margin-top: 15px;
+  font-style: oblique; 
+    background-image: linear-gradient(60deg, green, blue, orange);
+    background-clip: text;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+/*
+@supports (background-clip: text) {
+.gradient-text {
+  background-image: linear-gradient(60deg, green, blue, orange);
+  background-clip: text;
+  color: transparent;
+  }
+}
+*/
 button.btn.btn-primary {
   right: 0;
   border-radius: 100%;
@@ -36,6 +56,27 @@ button.btn.btn-primary {
   
   
 }
+
+
+.card_ability {
+  font-weight: 500;
+  color: grey; 
+  font-family: kanit, sans-serif;
+  margin-top: 15px;
+  font-style: oblique;
+  text-align: center;
+}
+
+table {
+  text-align: center;
+}
+
+#pokemonType {
+  font-size: 17px;
+  font-family: kanit, sans-serif;
+  text-transform: capitalize;
+}
+
 
 input.form-control {
   background-color: white;
