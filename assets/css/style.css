@@ -17,13 +17,12 @@ body {
 
 h1 {
   font-weight: 700;
-  color: white; 
+   
   font-family: kanit, sans-serif;
   margin-top: 15px;
   font-style: oblique; 
-    background-image: linear-gradient(60deg, green, blue, orange);
-    background-clip: text;
-    color:
+  color: linear-gradient(60deg, green, blue, orange);
+    
 }
 
 h2 {
@@ -32,9 +31,9 @@ h2 {
   font-family: kanit, sans-serif;
   margin-top: 15px;
   font-style: oblique; 
-    background-image: linear-gradient(60deg, green, blue, orange);
-    background-clip: text;
-    color:
+  background-image: linear-gradient(60deg, green, blue, orange);
+  background-clip: text;
+    
 }
 /*
 @supports (background-clip: text) {
