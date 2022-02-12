@@ -7,14 +7,20 @@ body {
 }
 
 .headline {
-  background-color: blue;
+  background: linear-gradient(45deg, red, blue, yellow);
+  border-style: solid;
+  border-width: thick;
+  border-color: gray;
+  border-radius: 25px;
 }
+
 
 h1 {
   font-weight: 700;
-  color: white;
-  font-family: Kanit, sans-serif;
+  color: gray; 
+  font-family: kanit, sans-serif;
   margin-top: 15px;
+  text-shadow: 5px 5px black;
 }
 
 #cards {
@@ -199,9 +205,8 @@ figcaption{
     }
   
   
-.name {
-    text-align: center;
-  }
+
+
   
 
     th {
@@ -215,4 +220,4 @@ figcaption{
       width: 50%;
       padding: 4px 8px 0;
     }
-    
+
