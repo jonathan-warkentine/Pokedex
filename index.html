@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,60 +9,66 @@
   <!--Bootstrap CSS Link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
 
-  <!--Custom CSS Link-->
-    <link rel="stylesheet" href="assets/css/style.css"/>
 
-  </head>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
 
+   </head>
 
 <body>
-
-    <!--Headline-->
+<!--Headline Complex-->
 
         <div class="headline">
             <header>
-                    <h1>Search For Your Favorite Pokemon</h1>
-            
-             <!--SoundCloud Widget-->
-
-            <iframe width=“100%” height="166" scrolling=“no” frameborder=“no” allow=“autoplay” src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/377399561">    </iframe>              
-            
+              <br>
+                    <h1>Search For Your Favorite Pokemon </h1>
+                        
           </header>
+                       <!--SoundCloud Widget-->
+
+
+          <iframe width=“100%” height="100%" scrolling=“no” frameborder=“no” allow=“autoplay” src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/377399561">    </iframe>              
+
         </div>
 
 
-      <!--Start Bootstrap Container-->
+      
+  <!--Start Bootstrap Container-->
+  
+       
 
+        <div class="container"> 
 
-      <div class="container"> 
+            <div class ="row justify-content-left">
 
-          <!--Search Bar-->
-
-      <div class ="row justify-content-left">
-
-          <div class="col-md-4">
-
-                <div>
-                    <form id="form">
-                        <div class="form-group" id="form-group">
-                          <label for="inputSearch">Enter Pokemon...</label>
-                          <input type="search" class="form-control" placeholder="Enter Pokemon" id="searchBar">
-                        </div id="searchBtn">
-                        <button type="submit" class="btn btn-primary">Search</button>
-                      </form>
-                </div>
-
-                <div>
-                    <ul id="search-list">
-                  </ul>
-                </div>
-          </div>
-
-
-      <!--Pokemon Card Begins-->
-        <div id="cards">  
+        <div class="col-md-4">
+  
           
-          <figure class="card card--normal" id="figure">
+          <!---Search Bar---->
+
+        <div>
+            <form id="form">
+                <div class="form-group">
+                  <label for="inputSearch"><!-- Enter Pokemon... --></label>
+                  <input type="search" class="form-control" placeholder="Enter Pokemon" id="searchBar">
+                </div id="searchBtn">
+                <button type="submit" id="search-button" class="btn btn-primary">Load Pokémon</button>
+              </form>
+        </div>
+
+        <div>
+            <ul id="search-list">
+          </ul>
+        </div>
+        </div>
+
+        
+
+
+      
+      <!--Pokemon Card Begins-->
+        <div id="cards" class="col-md-9 d-flex align-items-center">  
+          
+          <figure class="card card--normal electric" id="figure">
                   
             <!--Pokemon Card Image-->
               <div class="card_image-container">
@@ -78,7 +83,7 @@
 
                   <h1 id="pokemonName" class="card_name">Name</h1>
               
-                  <h3 id="pokemonType" class="card_type"> Type: </h3>
+                  <h3 id="pokemonType" class="card_type badge badge-secondary"> Type: </h3>
             
 
                       <!--Pokemon Stats-->
@@ -90,32 +95,32 @@
                             <tbody>
                               <tr>
                                 <th id="hp"> HP </th>
-                                <td id="hpresult"></td>
+                                <td id="hpResult"></td>
                               </tr>
 
                               <tr>
                                 <th id="attack"> Attack </th>
-                                <td id="attackresult"></td>
+                                <td id="attackResult"></td>
                               </tr>
                               
                               <tr>
                                 <th id="defense"> Defense </th>
-                                <td id="defenseresult"></td>
+                                <td id="defenseResult"></td>
                               </tr>
                         
                               <tr>
                                 <th id="specialAttack"> Special Attack </th>
-                                <td id="special-attackresult"></td>
+                                <td id="special-attackResult"></td>
                               </tr>
 
                               <tr>
                                 <th id="specialDefense"> Special Defense </th>
-                                <td id="special-defenseresult"></td>
+                                <td id="special-defenseResult"></td>
                               </tr>
 
                               <tr>
                                 <th id="Speed"> Speed </th>
-                                <td id="speedresult"></td>
+                                <td id="speedResult"></td>
                               </tr>
 
                             </tbody> 
@@ -134,7 +139,7 @@
                             </h4>
 
                             <h4 class="card_ability">
-                              <span id="hiddenAbility" class="card_label"> Hidden Ability: </span>
+                              <span id="hidden-ability" class="card_label"> Hidden Ability: </span>
                             </h4>
 
                           </div>
@@ -142,14 +147,14 @@
               </figcaption>
 
         </figure>
+          
+        </div>
 
-     </div>
-
+    
 
     <!-- Regular JQuery script linked below -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- Bootstrap script link below -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
     <!-- custom JS script link below -->
