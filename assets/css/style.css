@@ -7,7 +7,7 @@ body {
 }
 
 .headline {
-  background: linear-gradient(90deg, red, black, white);
+  background: linear-gradient(90deg, #DD0004, #252324, #fffdfa);
   border-style: solid;
   border-width: thick;
   border-color: black;
