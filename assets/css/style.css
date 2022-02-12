@@ -6,7 +6,7 @@ body {
   margin: 20px;
 }
 
-.headline {
+.jumbotron {
   background: linear-gradient(90deg, red, black, white);
   border-style: solid;
   border-width: thick;
@@ -44,10 +44,18 @@ h2 {
   }
 }
 */
+
+#searchBar{
+  width: 300px;
+}
+
 button.btn.btn-primary {
   right: 0;
-  border-radius: 100%;
-  background-color: rgb(255, 0, 0);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 80%;
+  background: linear-gradient(90deg, red, black);
+  font-size: x-large;
   font-weight: 600;
   font-style: oblique;
   color: white;
@@ -57,6 +65,15 @@ button.btn.btn-primary {
   
 }
 
+
+#search-list li{
+  margin: 5px;
+  border-radius: 15px;
+  color: white;
+  background: linear-gradient(90deg, red, black);
+  border-width: thick;
+  border-color: black;
+}
 
 .card_ability {
   font-weight: 500;
@@ -83,8 +100,7 @@ input.form-control {
   padding: 10px;
   border-style: solid;
   border-width: thick;
-  
-  text-color: black;
+  color: black;
 }
 
 #cards {
