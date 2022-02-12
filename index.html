@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,7 +20,7 @@
         <div class="headline">
             <header>
               <br>
-                    <h1>Search For Your Favorite<img id="logo" src="2560px-International_Pokémon_logo.svg.png"> </h1>
+                    <h1>Search For Your Favorite Pokemon </h1>
                         
           </header>
                        <!--SoundCloud Widget-->
@@ -32,34 +31,40 @@
         </div>
 
 
-      <!--Start Bootstrap Container-->
+      
+  <!--Start Bootstrap Container-->
+  
+       
+
+        <div class="container"> 
+
+            <div class ="row justify-content-left">
+
+        <div class="col-md-4">
+  
+          
+          <!---Search Bar---->
+
+        <div>
+            <form id="form">
+                <div class="form-group">
+                  <label for="inputSearch"><!-- Enter Pokemon... --></label>
+                  <input type="search" class="form-control" placeholder="Enter Pokemon" id="searchBar">
+                </div id="searchBtn">
+                <button type="submit" class="btn btn-primary">Load Pokémon</button>
+              </form>
+        </div>
+
+        <div>
+            <ul id="search-list">
+          </ul>
+        </div>
+        </div>
+
+        
 
 
-      <div class="container"> 
-
-          <!--Search Bar-->
-
-      <div class ="row d-flex justify-content-start">
-
-          <div class="col-md-3 d-flex align-items-left">
-
-                <div>
-                    <form>
-                        <div class="form-group" id="form-group">
-                          <label for="inputSearch">Enter Pokemon...</label>
-                          <input type="search" class="form-control" placeholder="Enter Pokemon" id="searchBar">
-                        </div id="searchBtn">
-                        <button type="submit" class="btn btn-primary">Search</button>
-                      </form>
-                </div>
-
-                <div>
-                    <ul id="search-list">
-                  </ul>
-                </div>
-          </div>
-
-
+      
       <!--Pokemon Card Begins-->
         <div id="cards" class="col-md-9 d-flex align-items-center">  
           
