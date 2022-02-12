@@ -9,6 +9,9 @@ $("#form").on("submit", function(event){
     event.preventDefault();
     fetchPokemon(document.querySelector("#searchBar").value);
     // widget1.play();
+//adds pokemon to recent
+    addToList();
+
 });
 
 $("#search-button").on("click", function(){
@@ -33,6 +36,7 @@ function fetchPokemon(search) {
     
 
 function writePokemon(data){
+
     document.querySelector("#figure").setAttribute("style", "display: block;")
     document.querySelector("#figure").setAttribute("class", `card card--normal ${data.types[0].type.name}`)
     document.querySelector("#pokemonType").textContent = `Type: ${data.types[0].type.name}`; //write type
@@ -44,6 +48,19 @@ function writePokemon(data){
     for (let i=0; i<data.stats.length; i++) {
         document.querySelector(`#${data.stats[i].stat.name}Result`).textContent = data.stats[i].base_stat
     }
-    
+ 
 };
+
+//function to add pokemon
+function addToList(p){
+    document.querySelector("#pokemonName").textContent = $("search-bar").toUpperCase();
+    var listEl= $("<li>"+p.toUpperCase()+"</li>");
+    $(listEl).attr("class","list-group-item");
+    $(listEl).attr("data-value",p.toUpperCase());
+    $("#search-list").append(listEl);
+}
+
+//var pokemonName = $("#pokemonName").textContent;
+//var savedLocal = localStorage.getItem()
+//var inputArea = $("#searchBar")
 
