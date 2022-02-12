@@ -21,8 +21,11 @@ h1 {
   font-family: kanit, sans-serif;
   margin-top: 15px;
   font-style: oblique; 
+<<<<<<< HEAD
   color: linear-gradient(60deg, green, blue, orange);
     
+=======
+>>>>>>> 511d91d81f13e7d18242e76285e68503fdba1390
 }
 
 h2 {
@@ -31,9 +34,17 @@ h2 {
   font-family: kanit, sans-serif;
   margin-top: 15px;
   font-style: oblique; 
+<<<<<<< HEAD
   background-image: linear-gradient(60deg, green, blue, orange);
   background-clip: text;
     
+=======
+    background-image: linear-gradient(60deg, green, blue, orange);
+    background-clip: text;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+>>>>>>> 511d91d81f13e7d18242e76285e68503fdba1390
 }
 /*
 @supports (background-clip: text) {
@@ -91,6 +102,7 @@ input.form-control {
   display: flex!important;
   align-content: center;
   justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .card_name{
@@ -244,7 +256,18 @@ form {
   border-width: 10px;
 }
 
- 
+ .rock {
+  background-image: linear-gradient(brown, rgb(255, 201, 158));
+  display: inline-block;
+  width: 400px;
+  border-radius: 15px;  
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  border-style: solid;
+  border-color: brown;
+  border-width: 10px;
+}
 
 
 img {
