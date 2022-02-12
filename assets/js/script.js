@@ -9,14 +9,10 @@ $("#form").on("submit", function(event){
     event.preventDefault();
     fetchPokemon(document.querySelector("#searchBar").value);
     // widget1.play();
-//adds pokemon to recent
-    addToList();
-
 });
 
 $("#search-button").on("click", function(){
-    widget1.play();
-    widget1.resume();
+    //widget1.play();
 });
 
 // Fetches Search from Pokemon API
@@ -36,27 +32,28 @@ function fetchPokemon(search) {
     
 
 function writePokemon(data){
-
-    document.querySelector("#figure").setAttribute("style", "display: block;")
-    document.querySelector("#figure").setAttribute("class", `card card--normal ${data.types[0].type.name}`)
-    document.querySelector("#pokemonType").textContent = `Type: ${data.types[0].type.name}`; //write type
-    document.querySelector("#pokemonName").textContent = data.name.toUpperCase(); //write name
-    document.querySelector("#pokemonImage").setAttribute("src", data.sprites.other.dream_world.front_default);
-    document.querySelector("#ability").textContent = `Ability: ${data.abilities[0].ability.name.toUpperCase()}`;
-    document.querySelector("#hidden-ability").textContent = `Hidden Ability: ${data.abilities[1].ability.name.toUpperCase()}`;
+    let newCardEl = $("#figure").clone();
+    newCardEl.attr("style", "display: block;");
+    newCardEl.addClass(data.types[0].type.name);
+    newCardEl.find("#pokemonType").text(`Type: ${data.types[0].type.name}`); //write type
+    newCardEl.find("#pokemonName").text(data.name.toUpperCase()); //write name
+    newCardEl.find("#pokemonImage").attr("src", data.sprites.other.dream_world.front_default);
+    newCardEl.find("#ability").text(`Ability: ${data.abilities[0].ability.name.toUpperCase()}`);
+    newCardEl.find("#hidden-ability").text(`Hidden Ability: ${data.abilities[1].ability.name.toUpperCase()}`);
     
     for (let i=0; i<data.stats.length; i++) {
-        document.querySelector(`#${data.stats[i].stat.name}Result`).textContent = data.stats[i].base_stat
+        newCardEl.find(`#${data.stats[i].stat.name}Result`).text(data.stats[i].base_stat);
     }
- 
+    
+    $("#cards").append(newCardEl);
+    addToList(data.name.toUpperCase());
 };
 
 //function to add pokemon
-function addToList(p){
-    document.querySelector("#pokemonName").textContent = $("search-bar").toUpperCase();
-    var listEl= $("<li>"+p.toUpperCase()+"</li>");
+function addToList(pokeName){
+    var listEl= $("<li>"+pokeName+"</li>");
     $(listEl).attr("class","list-group-item");
-    $(listEl).attr("data-value",p.toUpperCase());
+    $(listEl).text(pokeName);
     $("#search-list").append(listEl);
 }
 
