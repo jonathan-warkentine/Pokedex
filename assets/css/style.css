@@ -37,6 +37,27 @@ button.btn.btn-primary {
   
 }
 
+
+.card_ability {
+  font-weight: 500;
+  color: grey; 
+  font-family: kanit, sans-serif;
+  margin-top: 15px;
+  font-style: oblique;
+  text-align: center;
+}
+
+table {
+  text-align: center;
+}
+
+#pokemonType {
+  font-size: 17px;
+  font-family: kanit, sans-serif;
+  text-transform: capitalize;
+}
+
+
 input.form-control {
   background-color: white;
   padding: 10px;
