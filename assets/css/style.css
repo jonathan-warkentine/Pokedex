@@ -21,9 +21,6 @@ h1 {
   font-family: kanit, sans-serif;
   margin-top: 15px;
   font-style: oblique; 
-    background-image: linear-gradient(60deg, green, blue, orange);
-    background-clip: text;
-    color:
 }
 
 h2 {
@@ -34,7 +31,9 @@ h2 {
   font-style: oblique; 
     background-image: linear-gradient(60deg, green, blue, orange);
     background-clip: text;
-    color:
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
 }
 /*
 @supports (background-clip: text) {

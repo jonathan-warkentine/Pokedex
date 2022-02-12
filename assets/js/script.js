@@ -33,8 +33,9 @@ function fetchPokemon(search) {
     
 
 function writePokemon(data){
+    document.querySelector("#figure").setAttribute("style", "display: block;")
     document.querySelector("#figure").setAttribute("class", `card card--normal ${data.types[0].type.name}`)
-    document.querySelector("#pokemonType").textContent = data.types[0].type.name; //write type
+    document.querySelector("#pokemonType").textContent = `Type: ${data.types[0].type.name}`; //write type
     document.querySelector("#pokemonName").textContent = data.name.toUpperCase(); //write name
     document.querySelector("#pokemonImage").setAttribute("src", data.sprites.other.dream_world.front_default);
     document.querySelector("#ability").textContent = `Ability: ${data.abilities[0].ability.name.toUpperCase()}`;
