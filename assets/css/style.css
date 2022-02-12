@@ -46,6 +46,23 @@ input.form-control {
   text-color: black;
 }
 
+#cards {
+  display: flex!important;
+  align-content: center;
+  justify-content: center;
+}
+
+.card_name{
+  text-shadow: none;
+}
+
+#logo {
+  height: 90px;
+  width: 175px;
+  display: inline-block;
+  margin-bottom: 19px;
+}
+
 img {
   display: inline;
 }
@@ -60,6 +77,10 @@ img {
     text-align: center;
     padding: 16px 16px 0;
     border-radius: 3px 3px 0 0;
+}
+
+form {
+  font-family: kanit, sans-serif;
 }
 
 
