@@ -3,6 +3,7 @@ var SC="object"==typeof SC?SC:{};SC.Widget=function(e){var t={};function n(r){if
 
 var iframeElement   = document.querySelector('iframe');
 var widget1         = SC.Widget(iframeElement);
+var recents = JSON.parse(localStorage.getItem("Pokemon"))?JSON.parse(localStorage.getItem("Pokemon")):[];
 
 // Search Submit Event Listener
 $("#form").on("submit", function(event){
@@ -17,6 +18,7 @@ $("#search-button").on("click", function(){
 
 // Fetches Search from Pokemon API
 function fetchPokemon(search) {
+    search = search.toLowerCase();
     fetch(`https://pokeapi.co/api/v2/pokemon/${search}`)
     .then( function(response){
         return response.json();
@@ -46,8 +48,28 @@ function writePokemon(data){
     }
     
     $("#cards").append(newCardEl);
-    addToList(data.name.toUpperCase());
+    addToRecent(data.name);
 };
+
+function addToRecent (pokeName) {
+console.log(pokeName);
+//dont add dup to array
+console.log(recents);
+if (recents.indexOf(pokeName) === -1) {
+    recents.push(pokeName)
+    localStorage.setItem("Pokemon",JSON.stringify(recents));
+    var capital = pokeName.charAt(0).toUpperCase() + pokeName.slice(1);
+    addToList(capital);
+}
+ } ;
+
+ for (let i = 0; i < recents.length; i++) {
+     console.log(recents[i].charAt(0).toUpperCase());
+     console.log(recents[i].slice(1));
+     var capital = recents[i].charAt(0).toUpperCase() + recents[i].slice(1);
+     addToList(capital);
+ }
+
 
 //function to add pokemon
 function addToList(pokeName){
@@ -55,9 +77,13 @@ function addToList(pokeName){
     $(listEl).attr("class","list-group-item");
     $(listEl).text(pokeName);
     $("#search-list").append(listEl);
+    listEl.click(function(event){
+        fetchPokemon(event.target.innerText)
+        
+    })
 }
 
 //var pokemonName = $("#pokemonName").textContent;
 //var savedLocal = localStorage.getItem()
-//var inputArea = $("#searchBar")
+//var inputArea = $("#search-list")
 
