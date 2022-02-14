@@ -260,6 +260,18 @@ form {
   border-width: 10px;
 }
 
+.dragon {
+  background-image: linear-gradient(grey, rgb(158, 181, 255));
+  display: inline-block;
+  width: 400px;
+  border-radius: 15px;  
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  border-style: solid;
+  border-color: grey;
+  border-width: 10px;
+}
 
 img {
 
