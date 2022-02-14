@@ -3,163 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokemon Searcher</title>
-
-
-  <!--Bootstrap CSS Link-->
+    <!--Bootstrap CSS Link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-
-
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./assets/css/style.css"/>
-
-   </head>
+    <link rel="icon" type="image/x-icon" href="./assets/images/pokeball_resaved.png">
+    <title>Pokédex</title>
+  </head>
 
 <body>
 <!--Headline Complex-->
 
-        <div class="headline">
-            <header>
-              <br>
-                    <h1>Search For Your Favorite Pokemon!</h1>
-                        
-          </header>
-                       <!--SoundCloud Widget-->
+  <header class="jumbotron d-flex nowrap align-items-center">
+    <img src="./assets/images/pokeball_resaved.png" alt="pokeball">
+    <h1 class="display-3">Welcome to the Pokédex!</h1>
+  </header>
 
-
-          <iframe width=“100%” height="100%" scrolling=“no” frameborder=“no” allow=“autoplay” src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/377399561">    </iframe>              
-
-        </div>
-
-
-      
   <!--Start Bootstrap Container-->
-  
-       
+  <main class="container-fluid p-3">
+  <iframe width="100%" height="120" scrolling="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/377399561"></iframe>
 
-        <div class="container"> 
-
-
-            <div class ="row d-flex justify-content-left">
-
-        <div class="col-md-3 d-flex align-items-left">
-  
-          
-          <!---Search Bar---->
-
-        <div>
-            <form id="form">
-                <div class="form-group">
-                  <label for="inputSearch"><!-- Enter Pokemon... --></label>
-                  <input type="search" class="form-control" placeholder="Enter Pokemon" id="searchBar">
-                </div id="searchBtn">
-                <button type="submit" id="search-button" class="btn btn-primary">Load Pokémon</button>
-
-              </form>
-        </div>
-
-        <div>
-            <ul id="search-list">
-          </ul>
-        </div>
-        </div>
-
-        
-
-
+  <div class="row pt-3">
+    
+    <!-- Search Bar -->
+    <div class="col-3 border">
       
-      <!--Pokemon Card Begins-->
-        <div id="cards" class="col-md-9 d-flex align-items-center">  
+      <!---Search Input ---->
+      <form id="form" class="d-flex justify-content-between align-items-center">
+          <div class="form-group">
+            <label for="inputSearch"></label>
+            <input id="searchBar" type="search" class="form-control" placeholder="Enter Pokémon..." atuocomplete="off">
+          </div id="searchBtn">
+          <button type="submit" id="search-button" class="btn btn-primary">Search!</button>
+      </form>
+
+      <!-- Recent Searches List -->
+      <ul id="search-list" class="m-0 p-0 pt-3">
+      </ul>
+
+    <!-- end Search Bar -->
+    </div>
+      
+
           
-          <figure class="card card--normal" id="figure" style="display: none;">
-                  
-            <!--Pokemon Card Image-->
-              <div class="card_image-container">
-                <img width="250px" height="250px" id="pokemonImage" alt="Image" class="card_image">   
-              </div>
-  
+    <!--Pokemon Cards Begin-->
+    <div id="cards" class="col-9 d-flex flex-wrap justify-content-start">      
+      
+      <!-- Pokemon Card Template -->
+      <figure class="card card--normal" id="card-template" style="display: none;">
+        
+        <button type="button" class="close" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
 
-              <!--Image Caption - Begins Pokemon Information-->
-               <figcaption class="card_caption">
+        <!--Pokemon Card Image-->
+        <div class="card_image-container">
+          <img width="250px" height="250px" id="pokemonImage" alt="Image" class="card_image">   
+        </div>         
 
-                  <!--Pokemon Name and Type-->
+        <!--Image Caption - Begins Pokemon Information-->
+        <figcaption class="card_caption">
 
-                  <h2 id="pokemonName" class="card_name">Name</h2>
-              
-                  <h3 id="pokemonType" class="card_type badge badge-secondary"> Type: </h3>
-            
+          <!--Pokemon Name and Type-->
+          <h2 id="pokemonName" class="card_name">Pokémon Name Here</h2>
+          <h3 id="pokemonType" class="card_type badge badge-secondary"> Type: </h3>
 
-                      <!--Pokemon Stats-->
-                          
-                        <div class="card_stats" id="card_stats">
-                            
-                          <table>
+          <!--Pokemon Stats-->    
+          <div class="card_stats" id="card_stats">
+            <table>
+              <tbody>
+                <tr>
+                  <th id="hp">HP:</th>
+                  <td id="hpResult"></td>
+                </tr>
+                <tr>
+                  <th id="attack">Attack:</th>
+                  <td id="attackResult"></td>
+                </tr>
+                <tr>
+                  <th id="defense">Defense:</th>
+                  <td id="defenseResult"></td>
+                </tr>    
+                <tr>
+                  <th id="specialAttack">Special Attack:</th>
+                  <td id="special-attackResult"></td>
+                </tr>    
+                <tr>
+                  <th id="specialDefense">Special Defense:</th>
+                  <td id="special-defenseResult"></td>
+                </tr>    
+                <tr>
+                  <th id="Speed">Speed:</th>
+                  <td id="speedResult"></td>
+                </tr>
+              </tbody> 
+            </table>
+          </div>
 
-                            <tbody>
-                              <tr>
-                                <th id="hp">HP:</th>
-                                <td id="hpResult"></td>
-                              </tr>
+          <!--Pokemon Other Abilities-->
+          <div class="card_abilities" id="card_abilities">
+            <h4 class="card_ability">
+              <span id ="ability" class="card_label">Card Ability: </span>
+            </h4>
+            <h4 class="card_ability">
+              <span id="hidden-ability" class="card_label">Hidden Ability: </span>
+            </h4>
+          </div>
 
-                              <tr>
-                                <th id="attack">Attack:</th>
-                                <td id="attackResult"></td>
-                              </tr>
-                              
-                              <tr>
-                                <th id="defense">Defense:</th>
-                                <td id="defenseResult"></td>
-                              </tr>
-                        
-                              <tr>
-                                <th id="specialAttack">Special Attack:</th>
-                                <td id="special-attackResult"></td>
-                              </tr>
-
-                              <tr>
-                                <th id="specialDefense">Special Defense:</th>
-                                <td id="special-defenseResult"></td>
-
-                              </tr>
-
-                              <tr>
-                                <th id="Speed">Speed:</th>
-                                
-                                <td id="speedResult"></td>
-
-                              </tr>
-
-                            </tbody> 
-                          
-                          </table>
-
-                        </div>
-
-
-                        <!--Pokemon Other Abilities-->
-
-                          <div class="card_abilities" id="card_abilities">
-                            
-                            <h4 class="card_ability">
-                              <span id ="ability" class="card_label"> Card Ability: </span>
-                            </h4>
-
-                            <h4 class="card_ability">
-                              <span id="hidden-ability" class="card_label"> Hidden Ability: </span>
-                            </h4>
-
-                          </div>
-
-              </figcaption>
-
-        </figure>
-          
-        </div>
-
+        </figcaption>
+      </figure>
+        
+    <!-- end cards col -->
+    </div>
+  <!-- end div class="row" -->
+  </div>  
+  <!-- end bootstrap container -->
+  </main>       
     
 
     <!-- Regular JQuery script linked below -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
-    
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
     <!-- custom JS script link below -->
