@@ -12,10 +12,6 @@ $("#form").on("submit", function(event){
     widget1.play();
 });
 
-$("#search-button").on("click", function(){
-    //widget1.play();
-});
-
 $("#cards").on("click", ".close", function(event){
     event.stopPropagation();
     $(event.target).parent().parent().remove();
@@ -51,7 +47,7 @@ function writePokemon(data){
         newCardEl.find(`#${data.stats[i].stat.name}Result`).text(data.stats[i].base_stat);
     }
     
-    $("#cards").append(newCardEl);
+    $("#cards").prepend(newCardEl);
     addToList(data.name.toUpperCase());
 };
 
@@ -60,7 +56,7 @@ function addToList(pokeName){
     var listEl= $("<li>"+pokeName+"</li>");
     $(listEl).attr("class","list-group-item");
     $(listEl).text(pokeName);
-    $("#search-list").append(listEl);
+    $("#search-list").prepend(listEl);
 }
 
 //var pokemonName = $("#pokemonName").textContent;
