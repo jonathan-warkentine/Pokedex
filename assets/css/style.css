@@ -17,7 +17,7 @@ body {
 
 h1 {
   font-weight: 700;
-  color: white;
+  color: #FFDE00;
   font-family: kanit, Arial, Helvetica, sans-serif;
   margin-top: 15px;
   font-style: oblique; 
@@ -37,15 +37,6 @@ h2 {
     padding: 5px;
     text-align: center;
 }
-/*
-@supports (background-clip: text) {
-.gradient-text {
-  background-image: linear-gradient(60deg, green, blue, orange);
-  background-clip: text;
-  color: transparent;
-  }
-}
-*/
 
 #searchBar{
   width: 95%;
@@ -60,7 +51,7 @@ button.btn.btn-primary {
   font-size: x-large;
   font-weight: 600;
   font-style: oblique;
-  color: white;
+  color: #ff;
   border-width: thick;
   border-color: blue;
   
@@ -71,10 +62,13 @@ button.btn.btn-primary {
 #search-list li{
   margin: 5px;
   border-radius: 15px;
-  color: white;
+  color: #ffdf00;
   background: linear-gradient(90deg, red, black);
   border-width: thick;
   border-color: black;
+  font-family:kanit, sans-serif;
+  font-weight: 600;
+  font-style: oblique;
 }
 
 #search-list li:hover{

@@ -97,5 +97,3 @@ const pokemonList = ["Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmele
 $( "#searchBar" ).autocomplete({
     source: pokemonList
   });
-
-
