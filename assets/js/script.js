@@ -97,8 +97,9 @@ function addToList(pokeName){ //displays given pokemon on recents list
 }
 //clear list resets the page
 function clearHistory(){
-   // preventDefault();
-    $("#clear");
+    console.log(clearHistory)
+    stopPropagation();
+    $("#search-list").empty();
     localStorage.clear();
     document.location.reload();
     preventDefault();
