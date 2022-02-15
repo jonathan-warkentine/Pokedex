@@ -13,7 +13,7 @@ $("#form").on("submit", function(event){
     event.preventDefault();
 
     fetchPokemon(document.querySelector("#searchBar").value.toLowerCase());
-    // widget1.play();
+    widget1.play();
 });
 
 $("#cards").on("click", ".close", function(event){
