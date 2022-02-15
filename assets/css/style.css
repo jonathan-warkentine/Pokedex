@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 
+@font-face {
+  font-family: 'pokemon';
+  src: url('./pokemon.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: "Times New Roman, Georgia, Garamond, serif";
   text-align: center;
