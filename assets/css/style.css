@@ -77,6 +77,10 @@ button.btn.btn-primary {
   border-color: black;
 }
 
+#search-list li:hover{
+  cursor: pointer;
+}
+
 .card_ability {
   font-weight: 500;
   color: grey; 
