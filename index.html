@@ -29,16 +29,17 @@
     <div class="col-lg-3">
       
       <!---Search Input ---->
-      <form id="form" class="d-flex justify-content-between align-items-center">
-          <div class="form-group">
-            <label for="inputSearch"></label>
-            <input id="searchBar" type="search" class="form-control" placeholder="Enter Pokémon..." atuocomplete="off">
-          </div id="searchBtn">
+      <form id="form" class="d-flex flex-nowrap align-items-center justify-content-between">
+          <input id="searchBar" type="search" class="form-control" placeholder="Enter Pokémon..." autocomplete="off">
           <button type="submit" id="search-button" class="btn btn-primary">Search!</button>
-          <button type="reset" onclick="clearHistory()" id="clear" class="btn btn-primary">Clear</button>
       </form>
 
       <!-- Recent Searches List -->
+      <hr>
+      <div id="recent-searches" class="d-flex flex-nowrap align-items-center justify-content-around">
+        <button type="reset" id="clear" class="btn btn-primary">Clear</button>
+        <h4><i>Recent Searches:</i></h4>
+      </div>
       <ul id="search-list" class="m-0 p-0 pt-3">
       </ul>
 
