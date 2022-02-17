@@ -127,6 +127,10 @@ input.form-control {
   font-family: 'Courier New', Courier, monospace;
 }
 
+.card:hover{
+  cursor: grab;
+}
+
 .card_name{
   text-shadow: none;
 }

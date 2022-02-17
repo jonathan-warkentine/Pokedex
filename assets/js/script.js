@@ -12,9 +12,13 @@ var pokemonList = [];
 fetchAllPokemon("https://pokeapi.co/api/v2/pokemon/");
 
 $( "#searchBar" ).autocomplete({
-    source: pokemonList
+    source: pokemonList,
+    select: function(event, ui){
+        fetchPokemon(ui.item.label.toLowerCase());
+    }
 });
 
+$("#cards").sortable();
 
 
 var pokemonSearches = localStorage.getItem("pokemonSearches") ? JSON.parse(localStorage.getItem("pokemonSearches")) : [];
@@ -22,14 +26,17 @@ var currentDeck = localStorage.getItem("currentDeck") ? JSON.parse(localStorage.
 var firstLoad = true;
 populatePage();
 
-// Search Submit Event Listener
-$("#form").on("submit", function(event){
+$("#form").on("submit", function(event){ // Search Submit Event Listener
     event.preventDefault();
     firstLoad = false;
     fetchPokemon(document.querySelector("#searchBar").value.toLowerCase());
 });
 
-$("#cards").on("click", ".close", function(event){
+$("#cards").on("mouseup", ".card", function(){
+    setTimeout(reorderDeck, 1000);
+})
+
+$("#cards").on("click", ".close", function(event){ 
     event.stopPropagation();
     currentDeck.splice(currentDeck.indexOf($(event.target).parent().parent().attr("id")), 1); 
     localStorage.setItem("currentDeck",JSON.stringify(currentDeck)); //write deletion to local storage
@@ -134,3 +141,10 @@ function fetchAllPokemon(url){
 }
 
 
+function reorderDeck(){
+    currentDeck = [];
+    for (let i=0; i<$("#cards").children().length-1; i++){
+        currentDeck.unshift($("#cards").children()[i].getAttribute("id"));
+    }
+    localStorage.setItem("currentDeck", JSON.stringify(currentDeck));
+}
