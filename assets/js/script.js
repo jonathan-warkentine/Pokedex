@@ -8,8 +8,7 @@ var widget1         = SC.Widget(iframeElement);
 
 // J Q U E R Y   U I   W I D G E T S
 //JQuery Autcomplete Feature
-pokemonList = JSON.parse(localStorage.getItem("pokemonList")) || [];
-pokemonList.length ? null : fetchAllPokemon("https://pokeapi.co/api/v2/pokemon/");
+var pokemonList =  JSON.parse(localStorage.getItem("pokemonList")) || fetchAllPokemon("https://pokeapi.co/api/v2/pokemon/");
 
 $( "#searchBar" ).autocomplete({
     source: pokemonList,
@@ -21,8 +20,8 @@ $( "#searchBar" ).autocomplete({
 //JQuery Sortable Cards Feature
 $("#cards").sortable();
 
-var pokemonSearches = localStorage.getItem("pokemonSearches") ? JSON.parse(localStorage.getItem("pokemonSearches")) : [];
-var currentDeck = localStorage.getItem("currentDeck") ? JSON.parse(localStorage.getItem("currentDeck")) : [];
+var pokemonSearches = JSON.parse(localStorage.getItem("pokemonSearches")) || [];
+var currentDeck = JSON.parse(localStorage.getItem("currentDeck")) || [];
 var firstLoad = true;
 populatePage();
 
@@ -127,6 +126,7 @@ function capitalizeFirstLetter (string){
 }
 
 function fetchAllPokemon(url){
+    let tempList = [];
     fetch(url)
     .then( function(response){
         return response.json();
@@ -140,6 +140,7 @@ function fetchAllPokemon(url){
     .catch( function(error){
         alert(error);
     });
+    return tempList;
 }
 
 
