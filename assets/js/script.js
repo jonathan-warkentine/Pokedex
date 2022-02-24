@@ -8,37 +8,13 @@ var widget1         = SC.Widget(iframeElement);
 /* J Q U E R Y   U I   W I D G E T S */
 //JQuery Autcomplete Feature
 
-let iterator = 0;
-var pokemonList =  JSON.parse(localStorage.getItem("pokemonList")) || fetchAllPokemon("https://pokeapi.co/api/v2/pokemon/"); //want to avoid unnecessary API calls
 
-function fetchAllPokemon(url){
-    let tempList = [];
-    fetch(url)
-    .then( function(response){
-        return response.json();
-    })
-    .then( function(data){
-        for (i=0; i<data.results.length; i++){
-            !data.results[i].name.includes("-") ? pokemonList.push(capitalizeFirstLetter(data.results[i].name)): null; //preventing weird alternative version Pokemon from making our list
-        };
+const pokemonList =  JSON.parse(localStorage.getItem("pokemonList"));
 
-        /* seems that the for loop version above is significantly faster */
-        // data.results.filter(result => {
-        //     return !result.name.includes("-") 
-        // })
-        // .forEach(pokemon => {
-        //     pokemonList.push(capitalizeFirstLetter(pokemon.name))
-        // });
-
-        data.next ? fetchAllPokemon(data.next) : localStorage.setItem("pokemonList", JSON.stringify(pokemonList));
-        
-    })
-    .catch( function(error){
-        alert(error);
-    });
-    return tempList;
-}
-
+if (!pokemonList) {
+    pokemonList = [];
+    fetchAllPokemon("https://pokeapi.co/api/v2/pokemon/");
+};
 
 $( "#searchBar" ).autocomplete({
     source: pokemonList,
@@ -77,9 +53,35 @@ $("#cards").on("click", ".close", function(event){
 $("#clear").click(clearSearchHistory);
 
 /* F U N C T I O N S */
+function fetchAllPokemon(url){ //recursive API call that populates our list of pokemon for use by our autocomplete JQuery widget
+    fetch(url)
+    .then( function(response){
+        return response.json();
+    })
+    .then( function(data){
+        for (i=0; i<data.results.length; i++){
+            !data.results[i].name.includes("-") ? pokemonList.push(capitalizeFirstLetter(data.results[i].name)): null; //preventing weird alternative version Pokemon from making our list
+        };
+
+        /* seems that the for loop version above is significantly faster */
+        // data.results.filter(result => {
+        //     return !result.name.includes("-") 
+        // })
+        // .forEach(pokemon => {
+        //     pokemonList.push(capitalizeFirstLetter(pokemon.name))
+        // });
+
+        data.next ? fetchAllPokemon(data.next) : localStorage.setItem("pokemonList", JSON.stringify(pokemonList));
+        
+    })
+    .catch( function(error){
+        alert(error);
+    });
+}
+
 function fetchPokemon(search) { // Fetches from Pokemon API
     search = search.toLowerCase();
-    widget1.play();
+    // widget1.play();
     fetch(`https://pokeapi.co/api/v2/pokemon/${search}`)
     .then( function(response){
         return response.json();
@@ -93,7 +95,7 @@ function fetchPokemon(search) { // Fetches from Pokemon API
     //     alert(`Pokémon not found :(" \n ${error}`);
     // });
 };
-    
+
 function writePokemon(data){
     newCardEl = document.createElement("div"); //this div is discarded and only its child <figure></figure> element below is added to the page
     newCardEl.innerHTML = 
@@ -168,8 +170,6 @@ function writePokemon(data){
     };
     
     $("#cards").prepend(newCardEl.children);
-
-    
 };
 
 function saveLocally (pokeName) {
