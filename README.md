@@ -16,4 +16,6 @@ The Pokemon cards are fully arrangeable: they can be rearranged via dragging and
 Cards populated, their arrangements, as well as the list of recent searches, all save to local storage such that the page can be closed or refreshed at any time and the page will be reconstructed exactly as the user left it.
 
 ---
-###
+### TODO:
+- [] refactor into TypeScript
+- [] employ a more functional programming approach
