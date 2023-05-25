@@ -1,7 +1,9 @@
+import { data } from "../config/data.js";
+
 export function saveReorderedDeck() {
-    currentDeck = [];
+    const newDeck = [];
     for (let i=0; i<$("#cards").children().length; i++){
-        currentDeck.unshift($("#cards").children()[i].getAttribute("id"));
+        newDeck.unshift($("#cards").children()[i].getAttribute("id"));
     }
-    localStorage.setItem("currentDeck", JSON.stringify(currentDeck));
+    localStorage.setItem("currentDeck", JSON.stringify(newDeck));
 }

@@ -1,52 +1,24 @@
+/****************************************
+              I M P O R T S
+****************************************/
+import { data } from "./config/data.js";
+
+/*            F U N C T I O N S        */
 import { populatePokemonList } from "./utils/populatePokemonList.js";
 import { fetchPokemon } from "./pokemonApiFunctions/fetchPokemon.js";
 import { populatePage } from "./utils/populatePage.js";
 import { clearSearchHistory } from "./utils/clearSearchHistory.js";
 
-import { data } from "./data.js";
+/*  J Q U E R Y   U I   W I D G E T S  */
+import { initializeJqueryWidgets } from "./jquery/initializeJqueryWidgets.js";
+
 
 async function main() {
     populatePokemonList();
     populatePage(data.currentDeck, data.pokemonSearches);
 
-    /****************************************
-        J Q U E R Y   U I   W I D G E T S
-    ****************************************/
+    initializeJqueryWidgets();
 
-    /* JQuery Autcomplete Feature */
-    $( "#searchBar" ).autocomplete({
-        source: data.pokemonList,
-        select: function(event, ui) {
-            fetchPokemon(ui.item.label);
-        } 
-    });
-
-    /* JQuery Sortable Cards Feature */
-    $( "#cards" ).sortable();
-
-    /* E V E N T    L I S T E N E R S */
-    // search Submit Event Listener
-    $( "#form" ).on("submit", function(event){ 
-        event.preventDefault();
-        firstLoad = false;
-        fetchPokemon(document.querySelector("#searchBar").value);
-    });
-
-    // saves the new order of the deck after rearrangements
-    $("#cards").on("mouseup", ".card", function(){ 
-        // 250ms delay allows JQuery to finish rearranging in order to avoid null placeholder values
-        setTimeout(saveReorderedDeck, 250); 
-    })
-
-    $("#cards").on("click", ".close", function(event){ 
-        event.stopPropagation();
-        currentDeck.splice(currentDeck.indexOf($(event.target).parent().parent().attr("id")), 1); 
-        // write deletion to local storage
-        localStorage.setItem("currentDeck",JSON.stringify(currentDeck));
-        $(event.target).parent().parent().remove();
-    });
-
-    $("#clear").click(clearSearchHistory);
 }
 
 main();

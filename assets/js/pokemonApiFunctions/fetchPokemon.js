@@ -1,5 +1,5 @@
-import { saveLocally } from "./saveLocally.js";
-import { writePokemon } from "./writePokemon.js";
+import { saveLocally } from "../utils/saveLocally.js";
+import { drawPokemonCard } from "./drawPokemonCard.js";
 
 export async function fetchPokemon(search) {
     search = search.toLowerCase();
@@ -7,8 +7,7 @@ export async function fetchPokemon(search) {
     return fetch(`https://pokeapi.co/api/v2/pokemon/${search}`)
     .then(response => response.json() )
     .then(data => {
-        console.log(data);
-        writePokemon(data);
+        drawPokemonCard(data);
         saveLocally(data.name);
     })
     .catch( function(error){
