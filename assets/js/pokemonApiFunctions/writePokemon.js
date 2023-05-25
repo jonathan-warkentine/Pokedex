@@ -1,5 +1,6 @@
 export function writePokemon(data){
-    newCardEl = document.createElement("div"); //this div is discarded and only its child <figure></figure> element below is added to the page
+    //this div is discarded and only its child <figure></figure> element below is added to the page
+    let newCardEl = document.createElement("div"); 
     newCardEl.innerHTML = 
       `<!-- Pokemon Card Template -->
       <figure class="card card--normal ${data.types[0].type.name}" id="${data.name}" style="display: block;">
