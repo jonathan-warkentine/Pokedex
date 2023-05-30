@@ -1,11 +1,8 @@
-import { data } from "../config/data.js";
-
-import { saveLocally } from "../utils/saveLocally.js";
-import { drawPokemonCard } from "./drawPokemonCard.js";
+// import { soundcloudWidget } from "../soundcloud/soundcloudWidget.js";
 
 export async function fetchPokemon(search) {
     search = search.toLowerCase();
-    // widget1.play();
+    // soundcloudWidget.play();
     return fetch(`https://pokeapi.co/api/v2/pokemon/${search}`)
     .then(response => response.json() )
     .catch( function(error){

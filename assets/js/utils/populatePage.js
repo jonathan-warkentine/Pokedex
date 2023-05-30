@@ -1,6 +1,6 @@
 import { data } from "../config/data.js";
 
-import { drawPokemonCard } from "../pokemonApiFunctions/drawPokemonCard.js";
+import { drawPokemonCard } from "./drawPokemonCard.js";
 import { fetchPokemon } from "../pokemonApiFunctions/fetchPokemon.js";
 
 import { capitalizeFirstLetter } from "./capitalizeFirstLetter.js";
