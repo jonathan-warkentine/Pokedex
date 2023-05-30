@@ -1,8 +1,4 @@
-import { data } from "../config/data.js";
-import { soundcloudWidget } from "../soundcloud/soundcloudWidget.js";
-
-import { saveLocally } from "../utils/saveLocally.js";
-import { drawPokemonCard } from "./drawPokemonCard.js";
+// import { soundcloudWidget } from "../soundcloud/soundcloudWidget.js";
 
 export async function fetchPokemon(search) {
     search = search.toLowerCase();
