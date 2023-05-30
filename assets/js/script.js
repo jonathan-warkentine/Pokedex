@@ -1,8 +1,6 @@
 /****************************************
               I M P O R T S
 ****************************************/
-import { data } from "./config/data.js";
-
 // function imports
 import { populatePokemonList } from "./utils/populatePokemonList.js";
 import { populatePage } from "./utils/populatePage.js";
